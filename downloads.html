@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>CorbHoonySMP | Server Downloads</title>
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    </head>
+    
+    <body>
+        <style>
+        
+        /* The sidebar container */
+        .sidebar {
+            height: 100vh; /* Full height */
+            width: 0px; /* Default width */
+            background-color: #333; /* Background color */
+            position: fixed; /* Fix the sidebar to the left */
+            top: 0;
+            left: 0;
+            transition: width 0.3s; /* Smooth transition for collapsing */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        /* Sidebar links */
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        /* Links change color on hover */
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 0px; /* Same as the width of the sidebar */
+            padding: 20px;
+            flex: 1;
+            transition: margin-left 0.3s; /* Smooth transition for content shift */
+        }
+
+        /* Button to collapse the sidebar */
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: left 0.3s;
+        }
+
+        /* Collapsed sidebar */
+        .sidebar.collapsed {
+            width: 250px;
+        }
+
+        /* Adjust main content when sidebar is collapsed */
+        .main-content.collapsed {
+            margin-left: 250px;
+        }
+
+        /* Move the button when sidebar is collapsed */
+        .toggle-btn.collapsed {
+            left: 260px;
+        }
+
+        .bottom-bar {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+
+        .bottom-bar.hidden {
+            transform: translateY(100%);
+        }
+        </style>
+        <link rel="stylesheet" href="stylesheets/index.css">
+        <div class="main-content" id="mainContent">
+            <h1>CorbHoonySMP Downloads</h1>
+            <h3>Download past seasons here!</h3>
+            <h1>Coming Soon...</h1>
+        </div>
+        
+        <div class="bottom-bar" id="bottomBar">
+            <a href="https://discord.gg/cDKMZnwvSh" target="_blank">
+                <img src="images/JoinDiscord.png" alt="JoinDiscord" style="width: 160px; height: auto;" id="bottomBar">
+            </a>
+        </div>
+
+
+
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="mySidebar">
+            <a href=index.html>Home</a>
+            <a href=downloads.html>Downloads</a>
+            <a href=contact.html>Contact</a>
+            <a href=about.html>About</a>
+            <a href="help.html">Help</a>
+        </div>
+
+    <!-- Button to toggle the sidebar -->
+    <div class="toggle-btn" id="toggleBtn" onclick="toggleSidebar()">☰</div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            var mainContent = document.getElementById("mainContent");
+            var toggleBtn = document.getElementById("toggleBtn");
+            var bottomBar = document.getElementById("bottomBar")
+
+            sidebar.classList.toggle("collapsed");
+            mainContent.classList.toggle("collapsed");
+            toggleBtn.classList.toggle("collapsed");
+            
+            bottomBar.classList.toggle("hidden");
+        }
+    </script>
+
+    </body>
+</html>
